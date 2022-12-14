@@ -10,7 +10,7 @@ Library implements all of the functions of the Emerging Threats API via PHP.
 
 ### Getting Started
 
-```
+```php
 require '../src/api.php';
 
 $et_api_key = "<enter_et_api_key_here>";
@@ -31,7 +31,7 @@ try {
 
 ### Querying Reputation Metadata
 
-```
+```php
 try {
 
     $reputation_categories = $api_client->repcategories();
@@ -54,7 +54,7 @@ For more information on reputation metadata please see http://apidocs.emergingth
 
 ### Querying Domain Information
 
-```
+```php
 try {
     $domain = "google.com";
 
@@ -97,7 +97,7 @@ For more information on domain information please see http://apidocs.emergingthr
 
 ### Querying IP Information
 
-```
+```php
 try {
      $ip = "139.59.254.147";
      
@@ -136,7 +136,7 @@ For more information on IP information please see http://apidocs.emergingthreats
 
 ### Querying Malmare Samples
 
-```
+```php
 try {
     $md5 = "c6ab7cee9e5175a576270d2274711276";
 
@@ -171,7 +171,7 @@ For more information on malware samples please see http://apidocs.emergingthreat
 
 ### Querying Signature Information
 
-```
+```php
 try {
     
     $sid = "2022482";
@@ -227,7 +227,7 @@ retry due to rate limits. The following exceptons can occur when a web service c
 
 It's possible to determine the error code in the exception handler.
 
-```
+```php
 { 
     // Some API call here... 
     $sid_documentation = $api_client->sid($sid)->documentation();
